@@ -1,0 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+#{form @Application.saveRoster()}
+	Enter a value<input type="text" name="value"></input>
+	<button type="action">Submit</button>
+#{/form}

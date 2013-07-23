@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+*{
+//these two ways of creating a link effect the same result but are processed differently
+
+//the first, the parameter is evaluated first then the action method
+<a href="@{Application.myaction(1)}"> One </a>  
+
+//the second, the action is evaluated first then the parameters
+//so there will be some cases when this will not work 
+<a href="@{Application.myaction().add("id", "2")}"> two </a>
+}*
+
+
+<a href="@{Application.newRoster}">Add New Roster</a>
